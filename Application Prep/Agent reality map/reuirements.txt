@@ -1,0 +1,4 @@
+# core
+python-dotenv>=1.0
+# demo agent
+# (no LLM deps for MVP; add later)

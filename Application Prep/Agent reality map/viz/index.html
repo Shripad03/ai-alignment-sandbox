@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Agent Reality Map</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 20px;
+        }
+
+        svg {
+            border: 1px solid #ddd;
+            width: 900px;
+            height: 520px;
+        }
+
+        .node circle {
+            r: 16;
+            fill: #e6f0ff;
+            stroke: #3b82f6;
+            stroke-width: 1.5;
+        }
+
+        .node text {
+            font-size: 12px;
+            dominant-baseline: middle;
+            text-anchor: middle;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+
+        #file {
+            margin-bottom: 12px;
+        }
+
+        pre {
+            background: #f7f7f7;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Agent Reality Map</h2>
+    <input id="file" type="file" accept=".jsonl" />
+    <svg id="svg"></svg>
+    <h3>Step Detail</h3>
+    <pre id="detail">Load a JSONL log (runs/<id>.jsonl)</pre>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./graph.js"></script>
+</body>
+
+</html>
